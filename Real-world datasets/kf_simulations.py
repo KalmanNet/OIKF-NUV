@@ -152,8 +152,8 @@ def OIKF_AM(data, time_t, len, r_squared, q_squared, x_init, P_init):
         v = y - H @ x_AM[:, :, i]
         gamma_pos = np.maximum(v ** 2 - r_squared, 0)
 
-        if gamma_pos < 20:
-            gamma_pos = 0
+        # if gamma_pos < 20:
+        #     gamma_pos = 0
 
     return  x_AM[:, 0, :]
 
