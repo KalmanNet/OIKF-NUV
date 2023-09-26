@@ -1,4 +1,4 @@
-from call_data import *
+from call_data_segway import *
 from call_data_quad import *
 from create_data import *
 from matrices_calculation import *
@@ -7,14 +7,12 @@ from analysis_and_results import *
 import numpy as np
 import os.path
 
-
-
 def main():
 
     # # Segway Robot # #
     vehicular = 'Segway'
 
-    data_GT_x, data_GT_y, data_GPS_x, data_GPS_y, time_GPS, time_GT = call_data()
+    data_GT_x, data_GT_y, data_GPS_x, data_GPS_y, time_GPS, time_GT = call_data_segway()
 
     #North direction
     data_y = data_GPS_x
